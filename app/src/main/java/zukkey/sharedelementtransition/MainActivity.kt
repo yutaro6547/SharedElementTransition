@@ -1,12 +1,16 @@
 package zukkey.sharedelementtransition
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat
+import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import zukkey.sharedelementtransition.databinding.ActivityMainBinding
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +20,15 @@ class MainActivity : AppCompatActivity() {
     val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     setSupportActionBar(binding.toolbar)
     binding.fab.setOnClickListener { view ->
-      Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-          .setAction("Action", null).show()
+      val bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
+          this,
+          binding.contentMain?.image,
+          "transition:android"
+      ).toBundle()
+      ActivityCompat.startActivity(
+          this,
+          Intent(this, NextActivity::class.java),
+          bundle)
     }
   }
 

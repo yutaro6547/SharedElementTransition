@@ -11,10 +11,12 @@
     tools:context="zukkey.sharedelementtransition.MainActivity"
     tools:showIn="@layout/activity_main">
     
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
+    <ImageView
+      android:id="@+id/image"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:transitionName="transition:android"
+      android:src="@drawable/android"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
