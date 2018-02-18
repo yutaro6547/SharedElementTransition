@@ -15,7 +15,7 @@
       android:id="@+id/image"
       android:layout_width="100dp"
       android:layout_height="100dp"
-      android:transitionName="transition:android"
+      android:transitionName="@string/transition"
       android:src="@drawable/android"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"

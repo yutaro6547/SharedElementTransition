@@ -9,7 +9,7 @@
     <ImageView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:transitionName="transition:android"
+      android:transitionName="@string/transition"
       android:src="@drawable/android"
       tools:ignore="ContentDescription"/>
   
