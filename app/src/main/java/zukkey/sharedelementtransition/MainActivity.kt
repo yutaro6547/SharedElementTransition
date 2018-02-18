@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
       val bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
           this,
           binding.contentMain?.image,
-          "transition:android"
+          getString(R.string.transition)
       ).toBundle()
       ActivityCompat.startActivity(
           this,
