@@ -18,7 +18,5 @@ class NextActivity: AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_next)
-    val customTransition = CustomTransition()
-    window.sharedElementEnterTransition = customTransition
   }
 }
