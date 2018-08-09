@@ -10,9 +10,13 @@ import zukkey.sharedelementtransition.databinding.ActivityNextBinding
  * Write Overview here.
  */
 class NextActivity: AppCompatActivity() {
+
+  private val binding by lazy {
+    DataBindingUtil.setContentView<ActivityNextBinding>(this, R.layout.activity_next)
+  }
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_next)
-    DataBindingUtil.setContentView<ActivityNextBinding>(this, R.layout.activity_next)
   }
 }
